@@ -1,0 +1,14 @@
+tomcat:
+    image: tomcat:8.0.43-jre8
+    ports:
+        - "8080:8080"
+apache:
+    build: ./apache2.4.25/
+    ports:
+        - "80:80"
+    volumes:
+        - ./apache2.4.25/htdocs:/usr/local/apache2/htdocs
+        - ./apache2.4.25/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+        - ./apache2.4.25/conf/extra:/usr/local/apache2/conf/extra
+    links:
+        - tomcat:tomcat
