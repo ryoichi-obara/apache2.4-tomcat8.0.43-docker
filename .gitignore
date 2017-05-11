@@ -1,0 +1,14 @@
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Office
+~$*.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+*.~vsdx
+
+# Manage empty directory
+!.gitkeep
